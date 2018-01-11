@@ -32,9 +32,9 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'CCDSwiftCore/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'CCDSwiftCore' => ['CCDSwiftCore/Assets/*.png']
-  # }
+   s.resource_bundles = {
+     'CCDSwiftCore' => ['CCDSwiftCore/Assets/*']
+   }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
