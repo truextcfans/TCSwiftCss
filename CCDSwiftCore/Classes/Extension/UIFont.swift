@@ -17,15 +17,15 @@ let iosVersion  = (UIDevice.current.systemVersion as NSString).floatValue
 
 
 extension UIFont{
-    class func CustomRegularFontOfSize(font:CGFloat)->UIFont?{
+    public class func CustomRegularFontOfSize(font:CGFloat)->UIFont?{
         return font.CustomRegularFont
     }
-    class func CustomFontOfSize(font:CGFloat)->UIFont?{
+    public class func CustomFontOfSize(font:CGFloat)->UIFont?{
         return font.CustomFont
     }
 }
 extension CGFloat{
-    var CustomMediumFont:UIFont?{
+    public var CustomMediumFont:UIFont?{
         get{
             if iosVersion<9{
                 return UIFont.init(name: "\(FontNameFor9)-Medium", size: self)
@@ -37,7 +37,7 @@ extension CGFloat{
         }
     }
     
-    var CustomRegularFont:UIFont?{
+    public var CustomRegularFont:UIFont?{
         get{
             if iosVersion<9{
                 return UIFont.init(name: "\(FontNameFor9)-Regular", size: self)
@@ -48,7 +48,7 @@ extension CGFloat{
             }
         }
     }
-    var CustomFont:UIFont?{
+    public var CustomFont:UIFont?{
         get{
             if iosVersion<9{
                 return UIFont.init(name: "\(FontNameFor9)-Light", size: self)
@@ -64,18 +64,18 @@ extension CGFloat{
 
 
 extension Int{
-    var CustomMediumFont:UIFont?{
+    public var CustomMediumFont:UIFont?{
         get{
             return CGFloat(self).CustomMediumFont
         }
     }
     
-    var CustomRegularFont:UIFont?{
+    public var CustomRegularFont:UIFont?{
         get{
           return CGFloat(self).CustomRegularFont
         }
     }
-    var CustomFont:UIFont?{
+    public var CustomFont:UIFont?{
         get{
             return CGFloat(self).CustomFont
             
@@ -84,34 +84,34 @@ extension Int{
 }
 
 extension Double{
-    var CustomMediumFont:UIFont?{
+    public var CustomMediumFont:UIFont?{
         get{
             return CGFloat(self).CustomMediumFont
         }
     }
-    var CustomRegularFont:UIFont?{
+    public var CustomRegularFont:UIFont?{
         get{
             return CGFloat(self).CustomRegularFont
         }
     }
-    var CustomFont:UIFont?{
+    public var CustomFont:UIFont?{
         get{
             return CGFloat(self).CustomFont
         }
     }
 }
 extension Float{
-    var CustomMediumFont:UIFont?{
+    public var CustomMediumFont:UIFont?{
         get{
             return CGFloat(self).CustomMediumFont
         }
     }
-    var CustomRegularFont:UIFont?{
+    public var CustomRegularFont:UIFont?{
         get{
             return CGFloat(self).CustomRegularFont
         }
     }
-    var CustomFont:UIFont?{
+    public var CustomFont:UIFont?{
         get{
             return CGFloat(self).CustomFont
         }

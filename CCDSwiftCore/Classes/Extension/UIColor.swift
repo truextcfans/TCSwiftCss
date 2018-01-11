@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 extension UIColor{
-    func translateIntoImage(frame:CGRect? = CGRect.init(x: 0, y: 0, width: 1, height: 1)) -> UIImage {
+    public func translateIntoImage(frame:CGRect? = CGRect.init(x: 0, y: 0, width: 1, height: 1)) -> UIImage {
         let rect = frame == nil ? CGRect.init(x: 0, y: 0, width: 1, height: 1) : frame!
         UIGraphicsBeginImageContext(rect.size)
         let context = UIGraphicsGetCurrentContext()
@@ -23,7 +23,7 @@ extension UIColor{
 
 
 extension CAGradientLayer{
-    convenience init(_ colors:[UIColor], _ frame:CGRect = CGRect.init(x: 0, y: 0, width: 1, height: 1)) {
+    public convenience init(_ colors:[UIColor], _ frame:CGRect = CGRect.init(x: 0, y: 0, width: 1, height: 1)) {
         self.init()
         self.frame = frame
         self.colors =  colors.map{$0.cgColor}
@@ -33,7 +33,7 @@ extension CAGradientLayer{
 }
 
 extension CALayer{
-    var toImage:UIImage?{
+    public var toImage:UIImage?{
         get{
             UIGraphicsBeginImageContextWithOptions(frame.size, isOpaque, 0)
             render(in: UIGraphicsGetCurrentContext()!)
