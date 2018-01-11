@@ -44,3 +44,24 @@ extension CALayer{
     }
     
 }
+
+public func UIColorFromRGB(_ rgbValue:Int) -> UIColor {
+    return UIColor.init(red:CGFloat((rgbValue & 0xFF0000) >> 16) / 255 , green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255, blue: CGFloat((rgbValue & 0x0000FF) ) / 255, alpha: 1.0)
+}
+public func CIColorFromRGB(_ rgbValue:Int) -> CIColor {
+    return CIColor.init(red:CGFloat((rgbValue & 0xFF0000) >> 16) / 255 , green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255, blue: CGFloat((rgbValue & 0x0000FF) ) / 255, alpha: 1.0)
+}
+//r g b 0-255
+public func UIColorFromRGB(_ r:Int ,_ g:Int ,_ b:Int ,_ alpha:CGFloat = 1.0) -> UIColor {
+    return UIColor.init(red:CGFloat(r) / 255 , green: CGFloat(g) / 255, blue: CGFloat(b) / 255, alpha: alpha)
+}
+
+extension Int{
+    public var color:UIColor{
+        return UIColorFromRGB(self)
+    }
+    public var ciColor:CIColor{
+        return CIColorFromRGB(self)
+    }
+}
+
