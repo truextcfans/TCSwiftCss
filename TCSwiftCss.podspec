@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint SwiftCss.podspec' to ensure this is a
+# Be sure to run `pod lib lint SwiftCssLike.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'SwiftCss'
+  s.name             = 'SwiftCssLike'
   s.version          = '0.1.8'
-  s.summary          = 'A short description of SwiftCss.'
+  s.summary          = 'A short description of SwiftCssLike.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -21,22 +21,22 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/truextcfans/SwiftCss.git'
+  s.homepage         = 'https://github.com/truextcfans/SwiftCssLike.git'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'truextcfans' => 'xietiancai@thinker.vc' }
-  s.source           = { :git => 'https://github.com/truextcfans/SwiftCss.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/truextcfans/SwiftCssLike.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'SwiftCss/Classes/**/*'
+  s.source_files = 'SwiftCssLike/Classes/**/*'
   
    s.resource_bundles = {
-     'SwiftCss' => ['SwiftCss/Assets/*']
+     'SwiftCssLike' => ['SwiftCssLike/Assets/*']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'SnapKit',         '4.0.0'
 end

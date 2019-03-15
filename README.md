@@ -1,9 +1,9 @@
-# SwiftCss
+# TCSwiftCss
 
-[![CI Status](http://img.shields.io/travis/truextcfans/SwiftCss.svg?style=flat)](https://travis-ci.org/truextcfans/SwiftCss)
-[![Version](https://img.shields.io/cocoapods/v/SwiftCss.svg?style=flat)](http://cocoapods.org/pods/SwiftCss)
-[![License](https://img.shields.io/cocoapods/l/SwiftCss.svg?style=flat)](http://cocoapods.org/pods/SwiftCss)
-[![Platform](https://img.shields.io/cocoapods/p/SwiftCss.svg?style=flat)](http://cocoapods.org/pods/SwiftCss)
+[![CI Status](http://img.shields.io/travis/truextcfans/TCSwiftCss.svg?style=flat)](https://travis-ci.org/truextcfans/TCSwiftCss)
+[![Version](https://img.shields.io/cocoapods/v/TCSwiftCss.svg?style=flat)](http://cocoapods.org/pods/TCSwiftCss)
+[![License](https://img.shields.io/cocoapods/l/TCSwiftCss.svg?style=flat)](http://cocoapods.org/pods/TCSwiftCss)
+[![Platform](https://img.shields.io/cocoapods/p/TCSwiftCss.svg?style=flat)](http://cocoapods.org/pods/TCSwiftCss)
 
 ## Example
 
@@ -13,11 +13,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-SwiftCss is available through [CocoaPods](http://cocoapods.org). To install
+TCSwiftCss is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-  pod 'SwiftCss', :git => 'https://github.com/truextcfans/SwiftCss.git'
+  pod 'TCSwiftCss', :git => 'https://github.com/truextcfans/TCSwiftCss.git'
 ```
 ## Usage
         let v1:UILabel = UILabel()
@@ -55,4 +55,4 @@ truextcfans, xietiancai@thinker.vc
 
 ## License
 
-SwiftCss is available under the MIT license. See the LICENSE file for more info.
+TCSwiftCss is available under the MIT license. See the LICENSE file for more info.
