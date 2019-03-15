@@ -1,9 +1,9 @@
-# CCDSwiftCore
+# SwiftCss
 
-[![CI Status](http://img.shields.io/travis/truextcfans/CCDSwiftCore.svg?style=flat)](https://travis-ci.org/truextcfans/CCDSwiftCore)
-[![Version](https://img.shields.io/cocoapods/v/CCDSwiftCore.svg?style=flat)](http://cocoapods.org/pods/CCDSwiftCore)
-[![License](https://img.shields.io/cocoapods/l/CCDSwiftCore.svg?style=flat)](http://cocoapods.org/pods/CCDSwiftCore)
-[![Platform](https://img.shields.io/cocoapods/p/CCDSwiftCore.svg?style=flat)](http://cocoapods.org/pods/CCDSwiftCore)
+[![CI Status](http://img.shields.io/travis/truextcfans/SwiftCss.svg?style=flat)](https://travis-ci.org/truextcfans/SwiftCss)
+[![Version](https://img.shields.io/cocoapods/v/SwiftCss.svg?style=flat)](http://cocoapods.org/pods/SwiftCss)
+[![License](https://img.shields.io/cocoapods/l/SwiftCss.svg?style=flat)](http://cocoapods.org/pods/SwiftCss)
+[![Platform](https://img.shields.io/cocoapods/p/SwiftCss.svg?style=flat)](http://cocoapods.org/pods/SwiftCss)
 
 ## Example
 
@@ -13,11 +13,11 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-CCDSwiftCore is available through [CocoaPods](http://cocoapods.org). To install
+SwiftCss is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-  pod 'CCDSwiftCore', :git => 'https://github.com/truextcfans/SwiftCss.git'
+  pod 'SwiftCss', :git => 'https://github.com/truextcfans/SwiftCss.git'
 ```
 ## Usage
         let v1:UILabel = UILabel()
@@ -55,4 +55,4 @@ truextcfans, xietiancai@thinker.vc
 
 ## License
 
-CCDSwiftCore is available under the MIT license. See the LICENSE file for more info.
+SwiftCss is available under the MIT license. See the LICENSE file for more info.

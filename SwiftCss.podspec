@@ -1,5 +1,5 @@
 #
-# Be sure to run `pod lib lint CCDSwiftCore.podspec' to ensure this is a
+# Be sure to run `pod lib lint SwiftCss.podspec' to ensure this is a
 # valid spec before submitting.
 #
 # Any lines starting with a # are optional, but their use is encouraged
@@ -7,9 +7,9 @@
 #
 
 Pod::Spec.new do |s|
-  s.name             = 'CCDSwiftCore'
+  s.name             = 'SwiftCss'
   s.version          = '0.1.7'
-  s.summary          = 'A short description of CCDSwiftCore.'
+  s.summary          = 'A short description of SwiftCss.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -30,10 +30,10 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
 
-  s.source_files = 'CCDSwiftCore/Classes/**/*'
+  s.source_files = 'SwiftCss/Classes/**/*'
   
    s.resource_bundles = {
-     'CCDSwiftCore' => ['CCDSwiftCore/Assets/*']
+     'SwiftCss' => ['SwiftCss/Assets/*']
    }
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
