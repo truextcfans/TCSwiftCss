@@ -14,7 +14,7 @@ public var lableFitSizeCss:UILabelCss = {
     $0.sizeToFit()
 }
 
-public func +=(lhsCube: UILabel, rhsCube:String){
+public func +=(lhsCube: UILabel, rhsCube:String?){
     lhsCube.text = rhsCube
 }
 public func +=(lhsCube: UILabel, rhsCube:UIFont){
@@ -38,6 +38,15 @@ extension Bool{
 }
 
 
+extension Optional where Wrapped == String{
+    public var textCss:UILabelCss{
+        get{
+            return{
+                $0.text = self
+            }
+        }
+    }
+}
 extension String{
     public var textCss:UILabelCss{
         get{

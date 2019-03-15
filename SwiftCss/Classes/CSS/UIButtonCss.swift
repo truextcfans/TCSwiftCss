@@ -10,30 +10,30 @@ import Foundation
 import UIKit
 
 
-public func titleCss(_ title:String,_ state:UIControlState = .normal) -> UIButtonCss {
+public func titleCss(_ title:String?,_ state:UIControl.State = .normal) -> UIButtonCss {
     return {
         $0.setTitle(title, for: state)
     }
 }
-public func titleColorCss(_ color:UIColor,_ state:UIControlState = .normal) -> UIButtonCss {
+public func titleColorCss(_ color:UIColor?,_ state:UIControl.State = .normal) -> UIButtonCss {
     return {
         $0.setTitleColor(color, for: state)
     }
 }
-public func bgImgCss(_ color:UIColor,_ state:UIControlState = .normal) -> UIButtonCss {
+public func bgImgCss(_ color:UIColor,_ state:UIControl.State = .normal) -> UIButtonCss {
     return {
         $0.setBackgroundImage(color.translateIntoImage(), for: state)
     }
 }
 
-public func +=(lhsCube: UIButton, rhsCube:UIImage){
+public func +=(lhsCube: UIButton, rhsCube:UIImage?){
     lhsCube.setBackgroundImage(rhsCube, for: .normal)
 }
-public func +=(lhsCube: UIButton, rhsCube:String){
+public func +=(lhsCube: UIButton, rhsCube:String?){
     lhsCube.setTitle(rhsCube, for: .normal)
 }
 
-public func +=(lhsCube: UIButton, rhsCube:UIFont){
+public func +=(lhsCube: UIButton, rhsCube:UIFont?){
     lhsCube.titleLabel?.font = rhsCube
 }
 public func +=(lhsCube: UIButton, rhsCube:CGFloat){
@@ -42,7 +42,7 @@ public func +=(lhsCube: UIButton, rhsCube:CGFloat){
 
 
 
-extension UIImage{
+extension Optional where Wrapped == UIImage{
     public var bgEnableCss:UIButtonCss{
         get{
             return{
@@ -67,6 +67,41 @@ extension UIImage{
 
 }
 
+extension UIImage{
+    public var bgEnableCss:UIButtonCss{
+        get{
+            return{
+                $0.setBackgroundImage(self, for: .disabled)
+            }
+        }
+    }
+    public var bgCss:UIButtonCss{
+        get{
+            return{
+                $0.setBackgroundImage(self, for: .normal)
+            }
+        }
+    }
+    public var bgHCss:UIButtonCss{
+        get{
+            return{
+                $0.setBackgroundImage(self, for: .highlighted)
+            }
+        }
+    }
+    
+}
+
+
+extension Optional where Wrapped == UIFont{
+    public var titleFontCss:UIButtonCss{
+        get{
+            return {
+                $0.titleLabel?.font = self
+            }
+        }
+    }
+}
 extension UIFont{
     public var titleFontCss:UIButtonCss{
         get{
@@ -76,6 +111,8 @@ extension UIFont{
         }
     }
 }
+
+
 extension CGFloat{
     public var titleFontCss:UIButtonCss{
         get{

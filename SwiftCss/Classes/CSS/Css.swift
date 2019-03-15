@@ -20,8 +20,8 @@ public typealias UIImageViewCss    = (UIImageView)->()
 
 
 // MARK: backgroundColor titleColor BackgroundImage
-public func +=<T:UIView>(lhsCube: T, rhsCube:UIColor){
-    lhsCube.setCss(rhsCube.bgCss)
+public func +=<T:UIView>(lhsCube: T, rhsCube:UIColor?){
+    lhsCube.backgroundColor = rhsCube
 }
 
 extension UIColor{
@@ -83,10 +83,39 @@ extension UIColor{
 
 
 // MARK: text placeholder 
-public func +=<T:NSObject>(lhsCube: T, rhsCube:String){
+public func +=<T:NSObject>(lhsCube: T, rhsCube:String?){
     lhsCube.setCss(rhsCube.css)
 }
 
+extension Optional where Wrapped == String{
+    public var css:Css{
+        get{
+            return{
+                if let a = $0 as? UILabel{
+                    a.text = self
+                    return
+                }
+                if let a = $0 as? UIButton{
+                    a.setTitle(self, for: .normal)
+                    return
+                }
+                if let a = $0 as? UITextView{
+                    a.text = self
+                    return
+                }
+                if let a = $0 as? UITextField{
+                    a.text = self
+                    return
+                }
+            }
+        }
+    }
+    public var placeholderCss:UITextFieldCss{
+        return{
+            $0.placeholder = self
+        }
+    }
+}
 extension String{
     public var css:Css{
         get{
@@ -115,7 +144,6 @@ extension String{
             $0.placeholder = self
         }
     }
-
 }
 
 

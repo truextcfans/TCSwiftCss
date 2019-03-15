@@ -13,7 +13,7 @@ public func +=(lhsCube: UIImageView, rhsCube:UIImage?){
     lhsCube.image = rhsCube
 }
 
-extension UIImage{
+extension Optional where Wrapped == UIImage{
     public var css:UIImageViewCss{
         return{
             $0.image = self
@@ -27,7 +27,19 @@ extension UIImage{
     }
 }
 
-
+extension UIImage{
+    public var css:UIImageViewCss{
+        return{
+            $0.image = self
+        }
+    }
+    
+    public var hCss:UIImageViewCss{
+        return{
+            $0.highlightedImage = self
+        }
+    }
+}
 
 
 
