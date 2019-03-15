@@ -9,7 +9,7 @@ import Foundation
 
 public extension String{
     public static var genUUID:String{
-            return (CFUUIDCreateString(nil, CFUUIDCreate(nil)) as? String) ?? ""
+        return (CFUUIDCreateString(nil, CFUUIDCreate(nil)) as String)
     }
 }
 
