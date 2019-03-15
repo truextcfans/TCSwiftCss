@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'TCSwiftCss'
   s.version          = '0.1.10'
-  s.summary          = 'A short description of TCSwiftCss.'
+  s.summary          = 'using swift like css'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -28,7 +28,7 @@ TODO: Add long description of the pod here.
 
   s.ios.deployment_target = '8.0'
   s.ios.deployment_target = '8.0'
-  s.swift_version = '4.0'
+  s.swift_version = '4.2'
 
   s.source_files = 'TCSwiftCss/Classes/**/*.{swift}'
   
@@ -36,5 +36,5 @@ TODO: Add long description of the pod here.
     'TCSwiftCss' => ['TCSwiftCss/Assets/*']
   }
 
-  s.dependency 'SnapKit',         '4.0.0'
+  s.dependency 'SnapKit',         '~> 4.0'
 end
