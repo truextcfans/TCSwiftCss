@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'TCSwiftCss'
-  s.version          = '0.1.8'
+  s.version          = '0.1.9'
   s.summary          = 'A short description of TCSwiftCss.'
 
 # This description is used to generate tags and improve search results.
@@ -22,19 +22,19 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/truextcfans/TCSwiftCss.git'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'truextcfans' => 'xietiancai@thinker.vc' }
   s.source           = { :git => 'https://github.com/truextcfans/TCSwiftCss.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '8.0'
+  s.swift_version = '4.0'
 
-  s.source_files = 'TCSwiftCss/Classes/**/*'
+  s.source_files = 'TCSwiftCss/Classes/**/*.{swift}'
   
-   s.resource_bundles = {
-     'TCSwiftCss' => ['TCSwiftCss/Assets/*']
-   }
+  s.resource_bundles = {
+    'TCSwiftCss' => ['TCSwiftCss/Assets/*']
+  }
 
   s.dependency 'SnapKit',         '4.0.0'
 end
